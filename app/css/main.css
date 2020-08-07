@@ -2,5 +2,80 @@
 * {
   font-family: "Manrope", sans-serif;
   color: #48556a;
+  font-size: 10px; }
+  * h2 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 700; }
+  * p,
+  * strong {
+    font-weight: 500;
+    font-size: 1.3em;
+    color: #6d7f97; }
+  * .info-text p {
+    margin: 0; }
+  * .info-text strong {
+    font-weight: 700;
+    color: #48556a; }
+  @media screen and (min-width: 780px) {
+    * {
+      font-size: 12px; } }
+  @media screen and (min-width: 1200px) {
+    * {
+      font-size: 14px; } }
+  @media screen and (min-width: 1440px) {
+    * {
+      font-size: 16px; } }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
   background-color: #ecf2f8;
-  font-size: 13px; }
+  height: 100vh; }
+
+.article {
+  background-color: white;
+  border-radius: 1em;
+  height: 28em;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: [picture] 28em [gutter] 4em [preview-text] auto [end] 4em [end-gutter];
+  grid-template-rows: repeat(7, 4em); }
+  .article .picture {
+    grid-area: 1 / picture / 8 / gutter; }
+    .article .picture img {
+      height: 100%;
+      width: 100%; }
+  .article .preview-header {
+    grid-area: 2 / preview-text / 4 / end; }
+  .article .preview-text {
+    grid-area: 4 / preview-text / 6 / end; }
+  .article .preview-info {
+    grid-area: 6 / preview-text / 7 / end;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+    .article .preview-info .info-picture {
+      height: 100%;
+      width: 4em;
+      margin-right: 2em; }
+      .article .preview-info .info-picture img {
+        height: 100%;
+        border-radius: 50%; }
+    .article .preview-info .info-text {
+      flex-grow: 1; }
+    .article .preview-info .share {
+      display: block;
+      height: 3.5em;
+      width: 3.5em;
+      background-image: url("/images/icon-share.svg");
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-position: center;
+      background-color: #6d7f97;
+      border-radius: 50%;
+      background-blend-mode: SCREEN; }
+    .article .preview-info .share-buttons {
+      position: absolute; }

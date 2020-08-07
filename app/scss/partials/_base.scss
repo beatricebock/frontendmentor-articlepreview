@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background-color: $light-grey-blue;
+  height: 100vh;
+}
+
+.article {
+  background-color: white;
+  border-radius: 1em;
+  height: 28em;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: [picture] 28em [gutter] 4em [preview-text] auto [end] 4em [end-gutter];
+  grid-template-rows: repeat(7, 4em);
+
+  .picture {
+    grid-area: 1 / picture / 8 / gutter;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .preview-header {
+    grid-area: 2 / preview-text / 4 / end;
+  }
+  .preview-text {
+    grid-area: 4 / preview-text / 6 / end;
+  }
+  .preview-info {
+    grid-area: 6 / preview-text / 7 / end;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .info-picture {
+      height: 100%;
+      width: 4em;
+      margin-right: 2em;
+      & img {
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+    .info-text {
+      flex-grow: 1;
+    }
+    .share {
+      display: block;
+      height: 3.5em;
+      width: 3.5em;
+      background-image: url("/images/icon-share.svg");
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-position: center;
+      background-color: $dark-blue;
+      border-radius: 50%;
+      background-blend-mode: SCREEN;
+    }
+    .share-buttons {
+      position: absolute;
+    }
+  }
+}

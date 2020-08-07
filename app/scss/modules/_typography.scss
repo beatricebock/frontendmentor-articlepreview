@@ -3,6 +3,38 @@
 * {
   font-family: "Manrope", sans-serif;
   color: $dark-grey;
-  background-color: $light-grey-blue;
-  font-size: 13px;
+  font-size: 10px;
+
+  h2 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  p,
+  strong {
+    font-weight: 500;
+    font-size: 1.3em;
+    color: $dark-blue;
+  }
+
+  .info-text {
+    p {
+      margin: 0;
+    }
+    strong {
+      font-weight: 700;
+      color: $dark-grey;
+    }
+  }
+
+  @media screen and (min-width: 780px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 16px;
+  }
 }
