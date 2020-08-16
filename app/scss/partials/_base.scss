@@ -58,10 +58,10 @@ body {
       background-image: url("/images/icon-share.svg");
       background-repeat: no-repeat;
       background-size: 50%;
-      background-position: center;
-      background-color: $dark-blue;
+      background-position: center 44%;
+      background-color: $light-grey-blue;
       border-radius: 50%;
-      background-blend-mode: SCREEN;
+      transition: all 0.2s ease-in-out;
       &:hover {
         cursor: pointer;
       }
@@ -70,6 +70,11 @@ body {
       display: none;
 
       &:checked {
+        & ~ label {
+          background-color: $dark-blue;
+          background-blend-mode: SCREEN;
+        }
+
         & ~ .share-buttons {
           opacity: 1;
           transition: 0.3s cubic-bezier(0.48, 0.52, 0.62, 1.25);

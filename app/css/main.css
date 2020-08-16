@@ -76,14 +76,17 @@ body {
       background-image: url("/images/icon-share.svg");
       background-repeat: no-repeat;
       background-size: 50%;
-      background-position: center;
-      background-color: #6d7f97;
+      background-position: center 44%;
+      background-color: #ecf2f8;
       border-radius: 50%;
-      background-blend-mode: SCREEN; }
+      transition: all 0.2s ease-in-out; }
       .article .preview-info .share:hover {
         cursor: pointer; }
     .article .preview-info #share {
       display: none; }
+      .article .preview-info #share:checked ~ label {
+        background-color: #6d7f97;
+        background-blend-mode: SCREEN; }
       .article .preview-info #share:checked ~ .share-buttons {
         opacity: 1;
         transition: 0.3s cubic-bezier(0.48, 0.52, 0.62, 1.25);
